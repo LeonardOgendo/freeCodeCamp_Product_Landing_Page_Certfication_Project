@@ -5,6 +5,50 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 id="title"></h1>
+    <p id="description"></p>
+
+    <form action="" id="survey-form">
+        <label for="name-label">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        
+         <!--To add email format validation-->
+        <label for="email-label">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        
+        <!--add validation, should not access nono-numbers, display HTML validation error(optional)-->
+        <!--numbers outside the range of the numbers input defined by 
+            min and max attr, should throw a HTML validation error-->
+        <label for="number-label">Age</label>
+        <input type="number" id="number" placeholder="Enter your age" required>
+        
+        <p>Which Programming Language Do you prefer?</p>
+        <label><input type="radio" name="language">Python</label>
+        <label><input type="radio" name="language">Java</label>
+        <label><input type="radio" name="language">Kotlin</label>
+        <label><input type="radio" name="language">JavaScript</label>
+
+        <p>What's your preferred way of learning?</p>
+        <select id="dropdown">
+            <option>Tutorials</option>
+            <option>Books/Written Material</option>
+            <option>Physical</option>
+        </select>
+
+        <p>Which Materials would you like to access?</p>
+        <label><input type="checkbox" value="youtube_tutorials">Youtube Tutorials</label>
+        <label><input type="checkbox" value="academy_tutorials">Academy Tutorials</label>
+        <label><input type="checkbox" value="course_pdf">Course PDF</label>
+        <label><input type="checkbox" value="bootcamp">Bootcamps</label>
+
+        <p>Any comments or suggestions</p>
+        <textarea cols="10" rows="50">
+
+        </textarea>
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
