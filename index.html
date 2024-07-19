@@ -1,54 +1,78 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="title"></h1>
-    <p id="description"></p>
+    <section>
+        <h1 id="title">Developer Community Survey</h1>
+        <p id="description">Participate, and help us channel communication better.</p>
 
-    <form action="" id="survey-form">
-        <label for="name-label">Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
+        <form action="" id="survey-form">
+            <label id="name-label" for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label id="email-label" for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            
+            <label id="number-label" for="number">Age</label>
+            <input type="number" id="number" placeholder="Enter your age" min="16" max="60" required>
+            
+            <p>Which Programming Language Do you prefer?</p>
+            <div class="block--inputs">
+                <div class="block--content-b">
+                    <input type="radio" id="python" name="language" value="python">
+                    <label for="python">Python</label><br>
+                </div>
+                <div class="block--content-b">
+                    <input type="radio" id="java" name="language" value="java">
+                    <label for="java">Java</label><br>
+                </div>
+                <div class="block--content-b">
+                    <input type="radio" id="kotlin" name="language" value="kotlin">
+                    <label for="kotlin">Kotlin</label><br>
+                </div>
+                <div class="block--content-b">
+                    <input type="radio" id="js" name="language" value="js">
+                    <label for="js">JavaScript</label>
+                </div>
+            </div>
 
-        
-         <!--To add email format validation-->
-        <label for="email-label">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
+            <p>What's your preferred way of learning?</p>
+            <select id="dropdown">
+                <option>Tutorials</option>
+                <option>Books/Written Material</option>
+                <option>Physical</option>
+            </select>
 
-        
-        <!--add validation, should not access nono-numbers, display HTML validation error(optional)-->
-        <!--numbers outside the range of the numbers input defined by 
-            min and max attr, should throw a HTML validation error-->
-        <label for="number-label">Age</label>
-        <input type="number" id="number" placeholder="Enter your age" required>
-        
-        <p>Which Programming Language Do you prefer?</p>
-        <label><input type="radio" name="language">Python</label>
-        <label><input type="radio" name="language">Java</label>
-        <label><input type="radio" name="language">Kotlin</label>
-        <label><input type="radio" name="language">JavaScript</label>
+            <p>Which Materials would you like to access?</p>
+            <div class="block--inputs">
+                <div class="block--content">
+                    <input type="checkbox" id="youtube" value="youtube_tutorials">
+                    <label for="youtube">Youtube Tutorials</label><br>
+                </div>
+                <div class="block--content">
+                    <input type="checkbox" id="academy" value="academy_tutorials">
+                    <label for="academy">Academy Tutorials</label><br>
+                </div>
+                <div class="block--content">
+                    <input type="checkbox" id="pdf" value="course_pdf">
+                    <label for="pdf">Course PDF</label><br>
+                </div>
+                <div class="block--content">
+                    <input type="checkbox" id="bootcamps" value="bootcamp">
+                    <label for="bootcamps">Bootcamps</label>
+                </div> 
+            </div>
+            
+            <p>Any comments or suggestions</p>
+            <textarea cols="5" rows="5"></textarea>
 
-        <p>What's your preferred way of learning?</p>
-        <select id="dropdown">
-            <option>Tutorials</option>
-            <option>Books/Written Material</option>
-            <option>Physical</option>
-        </select>
-
-        <p>Which Materials would you like to access?</p>
-        <label><input type="checkbox" value="youtube_tutorials">Youtube Tutorials</label>
-        <label><input type="checkbox" value="academy_tutorials">Academy Tutorials</label>
-        <label><input type="checkbox" value="course_pdf">Course PDF</label>
-        <label><input type="checkbox" value="bootcamp">Bootcamps</label>
-
-        <p>Any comments or suggestions</p>
-        <textarea cols="10" rows="50">
-
-        </textarea>
-
-        <button type="submit">Submit</button>
-    </form>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </section>
 </body>
 </html>
